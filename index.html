@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kdj | 个人主页</title>
+    <style>
+      /* 全局现代暗黑风样式 */
+      :root {
+        --bg-color: #0d1117;
+        --card-bg: #161b22;
+        --text-main: #c9d1d9;
+        --text-muted: #8b949e;
+        --accent: #58a6ff;
+        --border-color: #30363d;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+          sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      /* 头部个人信息 */
+      header {
+        text-align: center;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      header h1 {
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+      }
+
+      .social-links a {
+        color: var(--accent);
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: 500;
+      }
+
+      .social-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* 板块通用样式 */
+      section {
+        margin-top: 40px;
+      }
+
+      section h2 {
+        color: #ffffff;
+        font-size: 1.5rem;
+        border-left: 4px solid var(--accent);
+        padding-left: 10px;
+        margin-bottom: 20px;
+      }
+
+      /* 技能标签 */
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skill-tag {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: var(--text-main);
+      }
+
+      /* 项目卡片（STAR法则） */
+      .project-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 24px;
+        margin-bottom: 20px;
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .project-title {
+        color: #ffffff;
+        font-size: 1.25rem;
+        margin: 0;
+      }
+
+      .project-tag {
+        font-size: 0.8rem;
+        background: rgba(88, 166, 255, 0.1);
+        color: var(--accent);
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+
+      .star-layout {
+        margin-top: 10px;
+      }
+
+      .star-item {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+      }
+
+      .star-label {
+        color: var(--accent);
+        font-weight: bold;
+        display: inline-block;
+        width: 35px;
+      }
+
+      /* 荣誉列表 */
+      .award-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .award-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+      }
+
+      .award-date {
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Kdj</h1>
+        <p>计算机专业 | 专注于算法研究、数据科学与 AI Infra 探索</p>
+        <div class="social-links">
+          <a href="https://github.com/dev-kdj" target="_blank">GitHub 社区</a>
+          <a href="https://dev-kdj.github.io" target="_blank">技术博客</a>
+          <a href="mailto:your-email@example.com">电子邮箱</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>🛠️ 核心技能栈</h2>
+        <div class="skills-container">
+          <span class="skill-tag">C++ (算法逻辑 / 竞赛)</span>
+          <span class="skill-tag">Python (数据科学 / 金融计算)</span>
+          <span class="skill-tag">Pandas / Scikit-learn</span>
+          <span class="skill-tag">Git / GitHub 团队协作</span>
+          <span class="skill-tag"
+            >大语言模型推理 (LLM / vLLM / SGLang 了解)</span
+          >
+          <span class="skill-tag">LaTeX 规范排版</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>🚀 核心项目经历</h2>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">AI 数字化心理健康监测工具 “心绘 V1.0”</h3>
+            <span class="project-tag">独立全栈研发</span>
+          </div>
+          <div class="star-layout">
+            <div class="star-item">
+              <span class="star-label">S:</span>
+              针对传统心理测试题目枯燥、效率低且缺乏 AI
+              结合的痛点，立项研发该数字化监测系统。
+            </div>
+            <div class="star-item">
+              <span class="star-label">T:</span> 负责系统架构从 0 到 1
+              的搭建，打通 AI
+              全自动化测试逻辑，并独立撰写全套软件著作权申请材料。
+            </div>
+            <div class="star-item">
+              <span class="star-label">A:</span>
+              采用严谨的代码逻辑处理复杂的用户测试流，优化模型调用边界，确保高并发下的系统数据清洗与稳定性。
+            </div>
+            <div class="star-item">
+              <span class="star-label">R:</span>
+              系统功能完整，实验报告复合预期，并已成功申请获得国家计算机软件著作权登记证书。
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">量化数据清洗与逻辑回归分析系统</h3>
+            <span class="project-tag">数据科学 / 金融计算</span>
+          </div>
+          <div class="star-layout">
+            <div class="star-item">
+              <span class="star-label">S:</span>
+              金融保险及测算数据中存在大量杂乱、缺失的 Excel
+              “脏数据”，难以直接进行机器学习建模。
+            </div>
+            <div class="star-item">
+              <span class="star-label">T:</span> 编写自动化 Python
+              脚本进行批量数据治理，并构建逻辑回归模型实现核心指标预测。
+            </div>
+            <div class="star-item">
+              <span class="star-label">A:</span> 利用 Pandas
+              进行缺失值填补与异常值剔除；针对逻辑回归训练中的收敛报错进行参数调优与边界测试，排除维度冲突。
+            </div>
+            <div class="star-item">
+              <span class="star-label">R:</span> 成功实现了全自动 Excel
+              数据清洗流程，模型测算准确率达到预期指标，高效完成实验结课报告。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>🏆 荣誉与成果</h2>
+        <ul class="award-list">
+          <li class="award-item">
+            <span>中华人民共和国国家计算机软件著作权 —— 《心绘软件 V1.0》</span>
+            <span class="award-date">2026 年</span>
+          </li>
+          <li class="award-item">
+            <span>蓝桥杯全国软件和信息技术专业人才大赛（C++ 组）</span>
+            <span class="award-date">参赛记录</span>
+          </li>
+          <li class="award-item">
+            <span>优秀学术大作业与 Experimental Report 满分评级</span>
+            <span class="award-date">2026 年</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
